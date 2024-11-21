@@ -2,67 +2,58 @@ package ie.atu.car_manager;
 
 public class Car {
 
-// Instance variable
+    // Instance variable
 
-private int VinNumber; // unique id for car 
-private String Model;
-private float Price;
-private boolean IsSold;
+    private int VinNumber; // unique id for car
+    private String Model;
+    private float PriceEur;
+    private boolean IsSold;
 
+    // Constructor
 
+    public Car(int VinNumber, String Model, float Price, boolean IsSold) {
+        this.VinNumber = VinNumber;
+        this.Model = Model;
+        this.PriceEur = PriceEur;
+        this.IsSold = IsSold;
+    }
 
-//Constructor
+    // Getter and setter methods
 
-public Car(int VinNumber, String Model, float Price,  boolean IsSold){
-    this.VinNumber = VinNumber;
-    this.Model = Model;
-    this.Price = Price;
-    this.IsSold = IsSold; 
-}
+    // Getter methods
 
+    public int getVinNumber() {
+        return this.VinNumber;
+    }
 
+    public String getModel() {
+        return this.Model;
+    }
 
-//Getter and setter methods
+    public float getPriceEur() {
+        return this.PriceEur;
+    }
 
-//Getter methods
+    public boolean getIsSold() {
+        return this.IsSold;
+    }
 
-public int getVinNumber(){
-    return this.VinNumber;
-}
+    // Setter methods
 
-public String getModel(){
-    return this.Model;
-}
+    public void setVinNumber(int VinNumber) {
+        this.VinNumber = VinNumber;
+    }
 
-public float getPrice(){
-    return this.Price;
-}
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
 
-public boolean getIsSold(){
-    return this.IsSold;
-}
+    public void setPrice(float PriceEur) {
+        this.PriceEur = PriceEur;
+    }
 
-
-//Setter methods
-
-public void setVinNumber(int VinNumber){
-    this.VinNumber = VinNumber;
-}
-
-public void setModel(String Model){
-    this.Model = Model;
-}
-
-public void setPrice(float Price){
-    this.Price = Price;
-}
-
-public void setIsSold(boolean IsSold){
-    this.IsSold = IsSold;
-}
-
-
-
-
+    public void setIsSold(boolean IsSold) {
+        this.IsSold = IsSold;
+    }
 
 }
