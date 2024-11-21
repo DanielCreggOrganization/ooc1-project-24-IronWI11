@@ -1,4 +1,4 @@
-package ie.atu.carManager;
+package ie.atu.car_manager;
 
 public class Main {
 
