@@ -11,6 +11,17 @@ private boolean IsSold;
 
 
 
+//Constructor
+
+public Car(int VinNumber, String Model, float Price,  boolean IsSold){
+    this.VinNumber = VinNumber;
+    this.Model = Model;
+    this.Price = Price;
+    this.IsSold = IsSold; 
+}
+
+
+
 //Getter and setter methods
 
 //Getter methods
