@@ -55,5 +55,4 @@ public class Car {
     public void setIsSold(boolean IsSold) {
         this.IsSold = IsSold;
     }
-
 }

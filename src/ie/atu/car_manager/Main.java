@@ -52,9 +52,16 @@ public class Main {
             }
 
 
+            // Main Class to test the project
+class InventoryManagement {
+    private static Product[] productArray = new Product[10]; // Array to store products
+    private static int productCount = 0; // Count of products added
+
+
 
             
         }
+    }
 
 
 
