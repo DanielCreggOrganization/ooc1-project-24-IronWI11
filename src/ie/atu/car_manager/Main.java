@@ -4,10 +4,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         // Creating a garage to store vehicles
-        Garage myGarage = new Garage(10); // Can hold up to 10 vehicles
+        Garage myGarage = new Garage(10);  // Can hold up to 10 vehicles
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
@@ -33,12 +32,12 @@ public class Main {
             }
 
             switch (choice) {
-                case 1: // Add a Car
+                case 1:  // Add a Car
                     System.out.print("Enter car make: ");
                     String make = scanner.nextLine();
                     System.out.print("Enter car model: ");
                     String model = scanner.nextLine();
-
+                    
                     // Input for year
                     int year = -1; // Initialize year
                     while (true) {
@@ -58,13 +57,11 @@ public class Main {
                     while (true) {
                         System.out.print("Enter fuel type (Petrol/Diesel/Electric): ");
                         fuelType = scanner.nextLine().trim(); // Get user input and trim whitespace
-
-                        if (fuelType.equalsIgnoreCase("Petrol") || fuelType.equalsIgnoreCase("Diesel")
-                                || fuelType.equalsIgnoreCase("Electric")) {
+                        
+                        if (fuelType.equalsIgnoreCase("Petrol") || fuelType.equalsIgnoreCase("Diesel") || fuelType.equalsIgnoreCase("Electric")) {
                             break; // Exit loop if valid fuel type is entered
                         } else {
-                            System.out.println(
-                                    "Invalid fuel type. Please enter either 'Petrol', 'Diesel', or 'Electric'.");
+                            System.out.println("Invalid fuel type. Please enter either 'Petrol', 'Diesel', or 'Electric'.");
                         }
                     }
 
@@ -74,72 +71,43 @@ public class Main {
                     System.out.println("Car added successfully!");
                     break;
 
-                case 2: // Delete a Car
+                case 2:  // Delete a Car
                     System.out.print("Enter the index of the car to delete: ");
                     int index = scanner.nextInt();
                     myGarage.deleteVehicle(index);
                     break;
-
-                case 3: // Show Total Number of Cars
+                    
+                case 3:  // Show Total Number of Cars
                     System.out.println("Total number of cars: " + myGarage.countCars());
                     break;
-
-                case 4: // Search for a Car
+                    
+                case 4:  // Search for a Car
                     System.out.print("Enter the car model to search: ");
-                    String searchModel = scanner.nextLine();
+                    String searchModel = scanner.nextLine(); // Get user input
+                    System.out.println("Searching for model: " + searchModel); // Debugging line
                     Vehicle foundCar = myGarage.findVehicleByModel(searchModel);
                     if (foundCar != null) {
-                        Car car = (Car) foundCar; // cast to a car
-                        foundCar.displayDetails(); // display the details if the found car
-
-                        // next line
-                        System.out.println("Would you like to toggle availability? (Yes/No)");
-                        String response = scanner.nextLine();
-                        if (response.equalsIgnoreCase("yes")) {
-                            car.setAvailability(!Car.isAvailable());
-
-                            // toggle availability
-                            System.out.println(
-                                    "Car availability updated." + (Car.isAvailable() ? "Available" : "Not Available"));
-                        }
+                        foundCar.displayDetails();
                     } else {
-                        System.out.println("Car not found.");
+                        System.out.println("Car not found."); // Print message if no car is found
                     }
                     break;
-
-                case 5:
-                    running = false;
-                    break;
-
-                case 6: // Show All Vehicles
+                    
+                case 5:  // Show All Vehicles
                     myGarage.displayAllVehicles();
                     break;
-
-                case 7: // Exit
+                    
+                case 6:  // Exit
                     running = false;
                     break;
-
+                    
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        }
-
-        // Display all vehicles in the garage
-        System.out.println("Vehicles in garage:");
-        myGarage.displayAllVehicles();
-
-        // Searching for a car
-        System.out.print("Enter the car model to search: ");
-        String searchModel = scanner.nextLine();
-        Vehicle foundCar = myGarage.findVehicleByModel(searchModel);
-        if (foundCar != null) {
-            System.out.println("Car found:");
-            foundCar.displayDetails();
-        } else {
-            System.out.println("Car not found.");
         }
 
         scanner.close();
         System.out.println("Exiting system. Goodbye!");
     }
 }
+

@@ -386,6 +386,6 @@ This documentation should provide a clear understanding of your Car Management S
 
   #### Sample Textbox Input
   <pre>
-  <b>Screencast Link:</b> https://atlantictu-my.sharepoint.com/:v:/g/personal/daniel_cregg_atu_ie/Ed9h1upB77VFuIm0ezGYj8MBlOaHCoiWUJkLUFqj0Z9OJQ?e=ua2JM1
-  <b>GitHub Link:</b> https://github.com/DanielCreggOrganization/ooc2-final-project-2021-annmurphy  
+  <b>Screencast Link:</b>https://atlantictu-my.sharepoint.com/personal/g00414808_atu_ie/_layouts/15/stream.aspx?id=%2Fpersonal%2Fg00414808_atu_ie%2FDocuments%2FRecording-20241218_192918%2Ewebm&nav=%7B"defaultNavPanel"%3A%7B"pluginName"%3A"MediaSettingsLayer"%7D%7D&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ed5e01f90-5790-4659-afc8-4c8dcdebbec6
+  <b>GitHub Link:</b> https://expert-barnacle-6qqr9vj5xxvcx5x5.github.dev  
   </pre>

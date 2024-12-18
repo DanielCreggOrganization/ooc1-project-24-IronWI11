@@ -14,7 +14,7 @@ public class Garage {
     public void addVehicle(Vehicle newVehicle) {
         if (count < vehicles.length) { // Check if there's space in the garage
             vehicles[count++] = newVehicle; // Add the new vehicle and increment count
-            System.out.println("Vehicle added!");
+            System.out.println("Vehicle added: " + newVehicle.getModel()); // Debugging line
         } else {
             System.out.println("Garage is full!"); // Print message if garage is full
         }
@@ -29,7 +29,7 @@ public class Garage {
                 vehicles[i] = vehicles[i + 1]; // Move the next vehicle up
             }
             vehicles[--count] = null; // Nullify the last vehicle position and decrement count
-            System.out.println("Vehicle deleted!");
+            System.out.println("Vehicle deleted!"); // Confirmation message
         } else {
             System.out.println("Invalid index!"); // Print message if index is invalid
         }
@@ -38,11 +38,11 @@ public class Garage {
     // Method to find a vehicle by its model
     public Vehicle findVehicleByModel(String model) {
         for (Vehicle v : vehicles) {
-            if (v != null && v.getModel().equals(model)) { // Check if v is not null and model matches
+            if (v != null && v.getModel().equalsIgnoreCase(model)) {  // Use equalsIgnoreCase for case insensitive comparison
                 return v; // Return the found vehicle
             }
         }
-        return null; // Return null if no vehicle is found with the given model
+        return null;  // Return null if no vehicle is found with the given model
     }
 
     // Method to display all vehicles in the garage
@@ -68,3 +68,4 @@ public class Garage {
         return carCount; // Return the total count of cars
     }
 }
+
