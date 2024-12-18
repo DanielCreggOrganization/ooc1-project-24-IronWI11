@@ -38,11 +38,11 @@ public class Garage {
     // Method to find a vehicle by its model
     public Vehicle findVehicleByModel(String model) {
         for (Vehicle v : vehicles) {
-            if (v != null && v.getModel().equals(model)) {  // Check if v is not null and model matches
+            if (v != null && v.getModel().equals(model)) { // Check if v is not null and model matches
                 return v; // Return the found vehicle
             }
         }
-        return null;  // Return null if no vehicle is found with the given model
+        return null; // Return null if no vehicle is found with the given model
     }
 
     // Method to display all vehicles in the garage
@@ -68,5 +68,3 @@ public class Garage {
         return carCount; // Return the total count of cars
     }
 }
-
-

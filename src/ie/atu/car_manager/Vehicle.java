@@ -15,5 +15,3 @@ public class Vehicle {
         System.out.println("Model: " + model);
     }
 }
-
-
